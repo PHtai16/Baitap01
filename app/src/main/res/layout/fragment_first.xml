@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".FirstFragment">
+
+    <!-- KHỐI HEADER - TIÊU ĐỀ THÔNG TIN CÁ NHÂN -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_background"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Avatar -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/vantai"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Tên -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phan Văn Tài"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Trường học -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="HCMC University of Technology and Education"
+            android:textColor="#E0F7FA"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+
+        <!-- Ngành học và MSSV -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="3rd year student – Information Security\nID: 23162086"
+            android:textColor="#B2EBF2"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <!-- KHỐI BODY - NỘI DUNG CHI TIẾT -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- KHỐI LIÊN HỆ (CONTACT) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact:"
+                android:textColor="#111111"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="0912361090"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="taine1412@gmail.com"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <!-- KHỐI VỊ TRÍ (LOCATION) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Location:"
+                android:textColor="#111111"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawableStart="@drawable/ic_baseline_home_24"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="Binh Duc, An Giang"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="Thu Duc, Ho Chi Minh"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <!-- Đường kẻ ngang phân cách -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#DDDDDD" />
+
+            <!-- KHỐI XỬ LÝ SỐ CHẴN LẺ -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phân loại Chẵn / Lẻ"
+                android:textColor="#111111"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Nhập các số, ngăn cách bởi dấu phẩy (,) hoặc khoảng trắng."
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_text_input_numbers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Ví dụ: 1, 5, 88, 91"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/button_process_numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="Phân loại" />
+
+            <!-- Đường kẻ ngang phân cách -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#DDDDDD" />
+
+            <!-- KHỐI ĐẢO NGƯỢC VÀ IN HOA CHUỖI -->
+            <!-- ============================================= -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Đảo ngược và In hoa Chuỗi"
+                android:textColor="#111111"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_text_input_string"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Ví dụ: I LOVE YOU"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/button_reverse_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="Thực hiện" />
+
+            <TextView
+                android:id="@+id/text_view_reversed_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Kết quả: "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <!-- ============================================= -->
+
+            <!-- Nút Ask me -->
+            <Button
+                android:id="@+id/button_ask_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#2C2C2C"
+                android:text="Ask me"
+                android:textColor="@android:color/white"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+    
