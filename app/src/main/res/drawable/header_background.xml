@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle"><!-- Bạn có thể dùng màu đơn sắc hoặc gradient như Toolbar -->
-    <!-- Ví dụ màu đơn sắc -->
-    <solid android:color="#00838F" /> <!-- Màu xanh Cyan đậm -->
-</shape>
-    

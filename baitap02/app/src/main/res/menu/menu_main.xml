@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Setting"
+        android:id="@+id/menuSetting"
+        android:icon="@android:drawable/ic_menu_set_as"
+        app:showAsAction="ifRoom" />
+
+    <item android:title="Share"
+        android:id="@+id/menuShare" />
+
+    <item android:title="Logout"
+        android:id="@+id/menuLogout" />
+
+</menu>
